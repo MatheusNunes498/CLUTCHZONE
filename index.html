@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CLUTCHZONE | Basketball Experience</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+
+        <div class="logo">
+            CLUTCH<span>ZONE</span>
+        </div>
+
+        <nav class="menu">
+            <a href="#inicio">Início</a>
+            <a href="#desafios">Desafios</a>
+            <a href="#jogadores">Jogadores</a>
+        </nav>
+
+        <a href="#desafios" class="btn-header">
+            Jogar agora
+        </a>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+
+       <section id="inicio" class="hero">
+
+    <div class="hero-content">
+
+        <span class="hero-label">BASKETBALL EXPERIENCE</span>
+
+        <h1>
+            ENTRE EM QUADRA.
+            <span>VIVA O JOGO.</span>
+        </h1>
+
+        <p>
+            Teste seus conhecimentos sobre a NBA, desafie seus amigos
+            e descubra até onde vai sua paixão pelo basquete.
+        </p>
+
+        <a href="#desafios" class="btn-hero">
+            JOGAR AGORA
+        </a>
+
+    </div>
+
+</section>
+
+       <!-- ÁREA DE DESAFIOS -->
+<section id="desafios" class="desafios">
+
+    <div class="titulo-secao">
+        <span>ESCOLHA SEU DESAFIO</span>
+        <h2>O JOGO COMEÇA AQUI</h2>
+        <p>
+            Mostre seus conhecimentos sobre a NBA
+            e descubra novos desafios.
+        </p>
+    </div>
+
+    <div class="cards-container">
+
+        <!-- CARD 1 -->
+        <div class="card-desafio">
+            <div class="card-icone">🏀</div>
+
+            <h3>QUIZ NBA</h3>
+
+            <p>
+                Teste seus conhecimentos sobre jogadores,
+                equipes e momentos históricos da NBA.
+            </p>
+
+            <button class="btn-card" id="btn-quiz" type="button">
+                 JOGAR QUIZ
+           </button>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card-desafio">
+            <div class="card-icone">⚔️</div>
+
+            <h3>DUELO DE JOGADORES</h3>
+
+            <p>
+                Compare grandes estrelas da NBA
+                e descubra quem domina as estatísticas.
+            </p>
+
+            <button class="btn-card" type="button">
+                INICIAR DUELO
+            </button>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card-desafio">
+            <div class="card-icone">🏆</div>
+
+            <h3>DESAFIOS NBA</h3>
+
+            <p>
+                Descubra curiosidades e enfrente
+                desafios sobre o universo do basquete.
+            </p>
+
+            <button class="btn-card" type="button">
+                EXPLORAR
+            </button>
+        </div>
+
+    </div>
+
+</section>
+
+         
+<!-- SEÇÃO DO QUIZ NBA -->
+<section id="quiz" class="quiz-container" hidden>
+
+    <div class="quiz-topo">
+        <span id="nivel-quiz">NÍVEL FÁCIL</span>
+        <span id="pontuacao">PLACAR: 0 PTS</span>
+    </div>
+
+    <div class="quiz-progresso">
+        <p id="numero-pergunta">PERGUNTA 1/22</p>
+        <div class="barra-progresso">
+            <div id="progresso-atual"></div>
+        </div>
+    </div>
+
+   <div class="quiz-temporizador">
+    <div class="shot-clock">
+        <h2 id="tempo-restante">10</h2>
+        <p>SHOT CLOCK</p>
+    </div>
+
+</div>
+
+    
+<div class="quiz-conteudo">
+    <h2 id="texto-pergunta">Qual jogador é conhecido como King James?</h2>
+    
+    <div class="area-respostas">
+
+        <img
+            id="imagem-jogador"
+            src=""
+            alt="Jogador misterioso"
+            hidden
+        >
+
+        <div id="alternativas">
+            <button class="alternativa">A) Stephen Curry</button>
+            <button class="alternativa">B) LeBron James</button>
+            <button class="alternativa">C) Kevin Durant</button>
+            <button class="alternativa">D) Kobe Bryant</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+    <p id="feedback-resposta"></p>
+
+    
+   <!-- SURPRESA DO CLUTCH TIME -->
+   <div id="surpresa-shaq" hidden>
+    <img src="assets/images/shaq-meme.gif" alt="Shaquille O'Neal rindo">
+
+    <p>😂 O SHAQ TINHA MAIS ANÉIS DE CAMPEÃO DO QUE CESTAS DE TRÊS NA CARREIRA!😂</p>
+
+    <button id="fechar-shaq" type="button"> X </button> 
+
+</div>
+
+
+</section>
+
+        <section id="jogadores">
+            <!-- Área de jogadores -->
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>CLUTCHZONE - Basketball Experience</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,728 @@
+
+/* =====================================
+   CLUTCHZONE - ESTILOS GERAIS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: auto;
+    overflow-anchor: none;
+}
+
+body {
+    background-color: #111318;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* =====================================
+   CABEÇALHO E MENU
+===================================== */
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 7%;
+    background-color: #191c23;
+    border-bottom: 1px solid #292d36;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #f28c28;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #c5c5c5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #f28c28;
+}
+
+.btn-header,
+.btn-hero,
+.btn-card {
+    background-color: #f28c28;
+    color: #111318;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-header {
+    padding: 12px 20px;
+}
+
+.btn-header:hover,
+.btn-hero:hover,
+.btn-card:hover {
+    background-color: #ffab50;
+}
+
+/* =====================================
+   DESTAQUE DA PÁGINA INICIAL
+===================================== */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(17, 19, 24, 0.98) 0%,
+            rgba(17, 19, 24, 0.85) 40%,
+            rgba(17, 19, 24, 0.25) 100%
+        ),
+        url("assets/images/jogador-destaque.jpg");
+
+    background-size: cover;
+    background-position: center 17%;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-label {
+    color: #f28c28;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #f28c28;
+    display: block;
+}
+
+.hero p {
+    color: #c5c5c5;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.btn-hero {
+    display: inline-block;
+    padding: 15px 28px;
+}
+
+.btn-hero:hover {
+    transform: translateY(-3px);
+}
+
+/* =====================================
+   ÁREA DE DESAFIOS
+===================================== */
+
+.desafios {
+    padding: 90px 7%;
+    background-color: #111318;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.titulo-secao span {
+    color: #f28c28;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.titulo-secao h2 {
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.titulo-secao p {
+    color: #b8b8b8;
+    font-size: 16px;
+}
+
+
+/* CARDS DOS DESAFIOS */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.card-desafio {
+    background-color: #1c2028;
+    background-size: cover;
+    background-position: center;
+
+    border: 1px solid #30343e;
+    border-radius: 12px;
+    padding: 35px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+/* CAMADA ESCURA SOBRE AS IMAGENS */
+
+.card-desafio::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.30);
+    z-index: -1;
+    transition: background-color 0.3s;
+}
+
+/* IMAGENS DE FUNDO DOS TRÊS CARDS */
+
+.card-desafio:nth-child(1) {
+    background-image: url("assets/images/fundo-quiz.jpg");
+}
+
+.card-desafio:nth-child(2) {
+    background-image: url("assets/images/fundo-duelo.jpg");
+}
+
+.card-desafio:nth-child(3) {
+    background-image: url("assets/images/fundo-desafios.jpg");
+}
+
+/* EFEITO AO PASSAR O MOUSE */
+
+.card-desafio:hover {
+    transform: translateY(-8px);
+    border-color: #f28c28;
+}
+
+.card-desafio:hover::before {
+    background-color: rgba(0, 0, 0, 0.48);
+}
+
+/* CONTEÚDO DOS CARDS */
+
+.card-icone {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+.card-desafio h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.card-desafio p {
+    color: #e0e0e0;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+.btn-card {
+    padding: 13px 22px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+/* =====================================
+   QUIZ NBA
+===================================== */
+
+.quiz-container {
+    max-width: 1000px;
+    margin: 25px auto 60px;
+    padding: 32px;
+
+    background-color: #15191f;
+    border: 1px solid #353b44;
+    border-radius: 16px;
+    color: #ffffff;
+
+    min-height: 850px;
+    overflow-anchor: none;
+}
+
+/* ELEMENTOS OCULTOS */
+
+.quiz-container[hidden],
+#imagem-jogador[hidden],
+#surpresa-shaq[hidden] {
+    display: none;
+}
+
+/* =====================================
+   TOPO E PROGRESSO
+===================================== */
+
+.quiz-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+#nivel-quiz {
+    color: #f59e0b;
+    font-weight: bold;
+}
+
+#pontuacao {
+    font-weight: bold;
+}
+
+#numero-pergunta {
+    margin-bottom: 12px;
+}
+
+.barra-progresso {
+    width: 100%;
+    height: 8px;
+    background-color: #353b44;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#progresso-atual {
+    width: 5%;
+    height: 100%;
+    background-color: #f59e0b;
+    transition: width 0.3s;
+}
+
+/* =====================================
+   SHOT CLOCK
+===================================== */
+
+.quiz-temporizador {
+    text-align: center;
+    margin: 18px 0;
+}
+
+.shot-clock {
+    width: 145px;
+    margin: 0 auto;
+    padding: 16px;
+
+    background-color: #090b0e;
+    border: 3px solid #555e69;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+
+    text-align: center;
+}
+
+.shot-clock #tempo-restante {
+    color: #ff3434;
+    font-family: monospace;
+    font-size: 54px;
+    font-weight: bold;
+    line-height: 1.2;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 12px rgba(255, 52, 52, 0.5);
+}
+
+.shot-clock p {
+    margin-top: 8px;
+    color: #aab0b8;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+@keyframes piscarRelogio {
+    50% {
+        opacity: 0.25;
+    }
+}
+
+.shot-clock.urgente #tempo-restante {
+    animation: piscarRelogio 0.5s infinite;
+}
+
+/* =====================================
+   PERGUNTAS E RESPOSTAS
+===================================== */
+
+.quiz-conteudo {
+    min-height: 490px;
+}
+
+#texto-pergunta {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 25px;
+    min-height: 60px;
+}
+
+.area-respostas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+}
+
+#alternativas {
+    display: grid;
+    flex: 1;
+    min-width: 0;
+    gap: 12px;
+}
+
+.alternativa {
+    width: 100%;
+    padding: 16px;
+
+    background-color: #282e37;
+    border: 1px solid #424852;
+    border-radius: 10px;
+
+    color: #ffffff;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.alternativa:hover {
+    border-color: #f59e0b;
+    background-color: #353b44;
+}
+
+.alternativa.correta,
+.alternativa.correta:hover {
+    border: 2px solid #22c55e;
+    background-color: #123524;
+}
+
+.alternativa.errada,
+.alternativa.errada:hover {
+    border: 2px solid #ef4444;
+    background-color: #451b1b;
+}
+
+.alternativa:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+/* FEEDBACK */
+
+#feedback-resposta {
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+    min-height: 1.2em;
+}
+
+/* =====================================
+   IMAGEM DO JOGADOR
+===================================== */
+
+#imagem-jogador {
+    display: block;
+    width: 290px;
+    height: 310px;
+    max-width: 100%;
+
+    object-fit: cover;
+    object-position: center 20%;
+
+    border-radius: 12px;
+    border: 2px solid #f59e0b;
+    flex-shrink: 0;
+}
+
+/* =====================================
+   MODO ADIVINHE O JOGADOR
+===================================== */
+
+/*
+   O modo especial altera o visual,
+   mas não fixa o quiz na tela.
+*/
+
+.modo-jogador .quiz-temporizador {
+    margin: 10px 0;
+}
+
+.modo-jogador .shot-clock {
+    width: 105px;
+    padding: 8px;
+}
+
+.modo-jogador .shot-clock #tempo-restante {
+    font-size: 40px;
+}
+
+/* FOTO GRANDE E CENTRALIZADA */
+
+.modo-jogador .area-respostas {
+    flex-direction: column;
+    gap: 18px;
+    min-height: 450px;
+}
+
+.modo-jogador #imagem-jogador {
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    max-height: 42dvh;
+    object-fit: contain;
+}
+
+/* ALTERNATIVAS EM DUAS COLUNAS */
+
+.modo-jogador #alternativas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 100%;
+    max-width: 850px;
+    gap: 12px;
+}
+
+.modo-jogador .alternativa {
+    padding: 14px;
+}
+
+/* =====================================
+   SURPRESA DO SHAQ
+===================================== */
+
+#surpresa-shaq {
+    text-align: center;
+    margin-top: 25px;
+    animation: aparecerShaq 0.5s ease;
+}
+
+#surpresa-shaq img {
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto 20px;
+
+    border-radius: 12px;
+    border: 2px solid #f59e0b;
+}
+
+#surpresa-shaq p {
+    color: #f59e0b;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+@keyframes aparecerShaq {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#fechar-shaq {
+    padding: 13px 30px;
+    background-color: #f59e0b;
+    color: #111318;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#fechar-shaq:hover {
+    background-color: #ffb733;
+}
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+    .desafios {
+        padding: 60px 5%;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    .quiz-container {
+        margin: 30px 15px;
+        padding: 18px;
+        min-height: 750px;
+    }
+
+    .quiz-conteudo {
+        min-height: 470px;
+    }
+
+    #texto-pergunta {
+        font-size: 20px;
+        min-height: 70px;
+    }
+
+    .alternativa {
+        font-size: 14px;
+        padding: 13px;
+    }
+
+    .area-respostas {
+        flex-direction: column;
+    }
+
+    #imagem-jogador {
+        width: 190px;
+        height: 190px;
+    }
+
+    #alternativas {
+        width: 100%;
+    }
+
+    .modo-jogador .area-respostas {
+        min-height: 420px;
+    }
+
+    .modo-jogador #imagem-jogador {
+        max-height: 35dvh;
+    }
+
+    .modo-jogador #alternativas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 6%;
+    }
+}
+
+
+/* =====================================
+   SURPRESA DO SHAQ - JANELA CENTRALIZADA
+===================================== */
+
+#surpresa-shaq {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 25px;
+    background-color: rgba(0, 0, 0, 0.92);
+    text-align: center;
+
+    animation: aparecerShaq 0.4s ease;
+}
+
+#surpresa-shaq[hidden] {
+    display: none;
+}
+
+#surpresa-shaq img {
+    display: block;
+    width: min(550px, 90vw);
+    max-height: 60vh;
+    object-fit: contain;
+
+    border: 3px solid #f59e0b;
+    border-radius: 16px;
+    box-shadow: 0 0 35px rgba(245, 158, 11, 0.35);
+}
+
+#surpresa-shaq p {
+    max-width: 600px;
+    color: #f59e0b;
+    font-size: clamp(18px, 3vw, 26px);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+@keyframes aparecerShaq {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
