@@ -506,22 +506,12 @@ function mostrarDuelo() {
     imagem1.src = jogadoresRodada[0].imagem;
     imagem1.alt = jogadoresRodada[0].nome;
 
-    imagem1.classList.toggle(
-    "foto-giannis",
-    jogadoresRodada[0].nome === "Giannis Antetokounmpo"
-);
-
     // JOGADOR DA DIREITA
 
     nome2.textContent = jogadoresRodada[1].nome;
     
     imagem2.src = jogadoresRodada[1].imagem;
     imagem2.alt = jogadoresRodada[1].nome;
-
-    imagem2.classList.toggle(
-    "foto-giannis",
-    jogadoresRodada[1].nome === "Giannis Antetokounmpo"
-);
 
     // LIMPAR RODADA ANTERIOR
 

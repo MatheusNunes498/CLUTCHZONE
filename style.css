@@ -1186,10 +1186,4 @@ body {
     border-color: #36c777;
 }
 
-/* ENQUADRAMENTO ESPECIAL DO GIANNIS */
-
-.jogador-duelo img.foto-giannis {
-    object-position: 75% top;
-}
-
 
