@@ -726,3 +726,237 @@ body {
         opacity: 1;
     }
 }
+
+
+/* =====================================
+   DUELO DE JOGADORES
+===================================== */
+
+.duelo-container {
+    max-width: 1000px;
+    margin: 25px auto 60px;
+    padding: 35px;
+
+    background-color: #15191f;
+    border: 1px solid #353b44;
+    border-radius: 16px;
+    color: #ffffff;
+
+    text-align: center;
+}
+
+/* MANTER O DUELO ESCONDIDO */
+
+.duelo-container[hidden],
+#proxima-rodada[hidden] {
+    display: none;
+}
+
+/* TOPO DO DUELO */
+
+.duelo-topo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#rodada-duelo {
+    color: #f28c28;
+}
+
+#pontuacao-duelo {
+    color: #ffffff;
+}
+
+/* PERGUNTA */
+
+#pergunta-duelo {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 35px;
+}
+
+/* ÁREA DOS JOGADORES */
+
+.duelo-jogadores {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* CARDS CLICÁVEIS */
+
+.jogador-duelo {
+    flex: 1;
+    max-width: 350px;
+    min-width: 0;
+
+    padding: 20px;
+
+    background-color: #1c2028;
+    border: 2px solid #353b44;
+    border-radius: 14px;
+
+    color: #ffffff;
+    cursor: pointer;
+
+    transition: transform 0.3s,
+                border-color 0.3s,
+                background-color 0.3s;
+}
+
+.jogador-duelo:hover {
+    transform: translateY(-6px);
+    border-color: #f28c28;
+    background-color: #252a34;
+}
+
+/* FOTOS DOS JOGADORES */
+
+.jogador-duelo img {
+    display: block;
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+    object-position: center top;
+
+    border-radius: 10px;
+    margin-bottom: 18px;
+}
+
+/* NOMES */
+
+.jogador-duelo h3 {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+/* VS CENTRAL */
+
+.duelo-versus {
+    color: #f28c28;
+    font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* RESPOSTA CERTA */
+
+.jogador-duelo.correto {
+    border-color: #22c55e;
+    background-color: #123524;
+}
+
+/* RESPOSTA ERRADA */
+
+.jogador-duelo.errado {
+    border-color: #ef4444;
+    background-color: #451b1b;
+}
+
+/* BOTÕES BLOQUEADOS APÓS A RESPOSTA */
+
+.jogador-duelo:disabled {
+    cursor: default;
+    opacity: 1;
+}
+
+.jogador-duelo:disabled:hover {
+    transform: none;
+}
+
+/* FEEDBACK */
+
+#feedback-duelo {
+    min-height: 25px;
+    margin-top: 30px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* BOTÃO PRÓXIMA RODADA */
+
+#proxima-rodada {
+    margin-top: 25px;
+    padding: 15px 30px;
+
+    background-color: #f28c28;
+    border: none;
+    border-radius: 8px;
+
+    color: #111318;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#proxima-rodada:hover {
+    background-color: #ffab50;
+}
+
+/* =====================================
+   DUELO - RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 600px) {
+
+    .duelo-container {
+        margin: 30px 15px;
+        padding: 20px 12px;
+    }
+
+    .duelo-topo {
+        font-size: 12px;
+        gap: 10px;
+    }
+
+    #pergunta-duelo {
+        font-size: 21px;
+        margin-bottom: 25px;
+    }
+
+    .duelo-jogadores {
+        gap: 8px;
+    }
+
+    .jogador-duelo {
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .jogador-duelo img {
+        height: 180px;
+        margin-bottom: 12px;
+    }
+
+    .jogador-duelo h3 {
+        font-size: 14px;
+    }
+
+    .duelo-versus {
+        font-size: 20px;
+    }
+
+    #feedback-duelo {
+        font-size: 15px;
+    }
+
+}
+
+.jogador-duelo img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: center top;
+}
+
