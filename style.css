@@ -1187,3 +1187,237 @@ body {
 }
 
 
+/* ========================================
+   TOP 20 PONTUADORES - CLUTCHZONE
+======================================== */
+
+.ranking-container {
+    padding: 80px 20px;
+    background-color: #111318;
+    color: #ffffff;
+}
+
+/* CABEÇALHO */
+
+.ranking-cabecalho {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.ranking-cabecalho span {
+    display: block;
+    color: #f28c28;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.ranking-cabecalho h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.ranking-cabecalho p {
+    color: #c5c5c5;
+    line-height: 1.6;
+}
+
+/* LISTA */
+
+.ranking-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* CARD */
+
+.ranking-card {
+    background-color: #1c2028;
+    border: 2px solid #353b44;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.ranking-card:hover {
+    border-color: #f28c28;
+    transform: translateY(-2px);
+}
+
+/* BOTÃO DO JOGADOR */
+
+.ranking-botao {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 22px;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+}
+
+/* POSIÇÃO */
+
+.ranking-posicao {
+    min-width: 45px;
+    color: #f28c28;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* NOME */
+
+.ranking-nome {
+    flex: 1;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* PONTOS */
+
+.ranking-pontos {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* TOP 3 */
+
+.ranking-destaque {
+    border-color: #a66a2a;
+    background-color: #25231f;
+}
+
+.ranking-destaque .ranking-posicao {
+    color: #ffb347;
+}
+
+/* DESCRIÇÃO */
+
+.ranking-descricao {
+    padding: 0 22px 22px 87px;
+    color: #c5c5c5;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.ranking-descricao[hidden] {
+    display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .ranking-container {
+        padding: 55px 15px;
+    }
+
+    .ranking-cabecalho h2 {
+        font-size: 24px;
+    }
+
+    .ranking-botao {
+        gap: 10px;
+        padding: 16px 12px;
+    }
+
+    .ranking-posicao {
+        min-width: 30px;
+        font-size: 17px;
+    }
+
+    .ranking-nome {
+        font-size: 14px;
+    }
+
+    .ranking-pontos {
+        font-size: 12px;
+    }
+
+    .ranking-descricao {
+        padding: 0 15px 18px;
+        font-size: 14px;
+    }
+}
+
+/* FOTOS DOS JOGADORES NO RANKING */
+
+.ranking-foto {
+    width: 65px;
+    height: 65px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    flex-shrink: 0;
+    background-color: #292d36;
+}
+
+@media (max-width: 600px) {
+    .ranking-foto {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+    }
+
+    .ranking-botao {
+        gap: 8px;
+    }
+
+    .ranking-posicao {
+        min-width: 25px;
+    }
+
+    .ranking-nome {
+        font-size: 13px;
+    }
+
+    .ranking-pontos {
+        font-size: 11px;
+    }
+}
+
+/* BOTÃO ABRIR E FECHAR RANKING */
+
+.btn-ranking {
+    display: block;
+    margin: 0 auto 30px;
+    padding: 15px 30px;
+    background-color: #f28c28;
+    color: #111318;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ranking:hover {
+    background-color: #ffab52;
+    transform: translateY(-2px);
+}
+
+/* GARANTE QUE O RANKING FIQUE ESCONDIDO */
+.ranking-lista[hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .btn-ranking {
+        width: 100%;
+        max-width: 320px;
+        font-size: 14px;
+    }
+}
+

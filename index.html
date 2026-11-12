@@ -251,7 +251,7 @@
             <div class="duelo-topo">
 
                 <span id="rodada-duelo">
-                    RODADA 1/10
+                    RODADA 1/15
                 </span>
 
                 <span id="pontuacao-duelo">
@@ -395,12 +395,34 @@
 
 
 
-        <!-- SEÇÃO DE JOGADORES -->
-        <section id="jogadores">
+      <!-- TOP 20 MAIORES PONTUADORES DA NBA -->
+<section id="jogadores" class="ranking-container">
 
-            <!-- Área de jogadores -->
+    <div class="ranking-cabecalho">
+        <span>CLUTCHZONE RECORDS</span>
 
-        </section>
+        <h2>TOP 20 PONTUADORES DA NBA</h2>
+
+        <p>
+            Conheça os 20 maiores pontuadores da história
+            da NBA na temporada regular.
+        </p>
+    </div>
+
+  <!-- BOTÃO PARA ABRIR E FECHAR O RANKING -->
+<button
+    id="toggle-ranking"
+    class="btn-ranking"
+    type="button"
+    aria-expanded="false"
+    aria-controls="ranking-lista"
+>
+    Ver ranking completo ▼
+</button>
+
+<!-- RANKING GERADO PELO JAVASCRIPT -->
+<div id="ranking-lista" class="ranking-lista" hidden>
+</div>
 
     </main>
 
@@ -413,11 +435,11 @@
     </footer>
 
 
-    <!-- JAVASCRIPT -->
-    <!-- JAVASCRIPT -->
+           <!-- JAVASCRIPT -->
      <script src="script.js"></script>
      <script src="duelo.js"></script>
      <script src="memory.js"></script>
+     <script src="ranking.js"></script>
 
 </body>
 
