@@ -402,6 +402,13 @@ function iniciarDuelo() {
 
 botaoDuelo.addEventListener("click", function() {
 
+    // Fecha o NBA Memory
+    if (typeof sairMemory === "function") {
+        sairMemory();
+        document.getElementById("memory").hidden = true;
+    }
+
+
     // Para os temporizadores do Quiz,
     // caso estejam disponíveis.
 
@@ -721,3 +728,48 @@ function finalizarDuelo() {
     botaoProxima.hidden = false;
 
 }
+
+
+/* =========================================
+   NAVEGAÇÃO - CLUTCHZONE
+========================================= */
+
+// LINKS DO MENU
+const linksMenu = document.querySelectorAll(
+    '.menu a[href="#inicio"], ' +
+    '.menu a[href="#desafios"], ' +
+    '.menu a[href="#jogadores"]'
+);
+
+// FECHAR TODOS OS JOGOS
+function fecharJogos() {
+
+    // Fecha o Quiz
+    telaQuizDuelo.hidden = true;
+
+    // Fecha o Duelo
+    telaDuelo.hidden = true;
+
+    // Para o cronômetro do Quiz
+    clearInterval(intervaloRelogio);
+
+    // Cancela o avanço automático
+    clearTimeout(temporizadorAvanco);
+
+    // Fecha o NBA Memory
+    if (typeof sairMemory === "function") {
+        sairMemory();
+    }
+
+    document.getElementById("memory").hidden = true;
+}
+
+// NAVEGAÇÃO PELO MENU
+linksMenu.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+        fecharJogos();
+    });
+
+});
+

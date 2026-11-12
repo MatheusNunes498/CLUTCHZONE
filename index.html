@@ -119,23 +119,25 @@
                 </div>
 
 
-                <!-- CARD 3 - DESAFIOS NBA -->
-                <div class="card-desafio">
+           <!-- CARD 3 - NBA MEMORY -->
+           <div class="card-desafio">
 
-                    <div class="card-icone">🏆</div>
+           <div class="card-icone">🃏</div>
 
-                    <h3>DESAFIOS NBA</h3>
+          <h3>NBA MEMORY</h3>
 
-                    <p>
-                        Descubra curiosidades e enfrente
-                        desafios sobre o universo do basquete.
-                    </p>
+       <p>
+        Teste sua memória e encontre os pares dos escudos
+        dos times da NBA. Vire as cartas, desafie sua
+        concentração e complete o jogo no menor tempo possível!
+    </p>
 
-                    <button class="btn-card" type="button">
-                        EXPLORAR
-                    </button>
+         <button class="btn-card" id="btn-abrir-memory" type="button">
+               JOGAR AGORA
+        </button>
 
-                </div>
+</div>
+
 
             </div>
 
@@ -324,6 +326,74 @@
 
         </section>
 
+               
+<!-- SEÇÃO DO NBA MEMORY -->
+<section id="memory" class="memory-container" hidden>
+
+    <div class="memory-cabecalho">
+        <h2>NBA MEMORY</h2>
+        <p>Encontre os pares dos escudos dos times da NBA!</p>
+    </div>
+
+    <!-- SELEÇÃO DE DIFICULDADE -->
+    <div id="memory-menu" class="memory-menu">
+
+        <h3>ESCOLHA SUA DIFICULDADE</h3>
+
+        <div class="memory-dificuldades">
+            <button id="memory-facil" type="button">
+                FÁCIL - 4 PARES
+            </button>
+
+            <button id="memory-medio" type="button">
+                MÉDIO - 6 PARES
+            </button>
+
+            <button id="memory-dificil" type="button">
+                DIFÍCIL - 8 PARES
+            </button>
+        </div>
+
+    </div>
+
+    <!-- ÁREA DO JOGO -->
+    <div id="memory-jogo" hidden>
+
+        <div class="memory-topo">
+            <span id="memory-tempo">TEMPO: 00:00</span>
+            <span id="memory-tentativas">TENTATIVAS: 0</span>
+            <span id="memory-pares">PARES: 0/4</span>
+        </div>
+
+        <!-- CARTAS GERADAS PELO JAVASCRIPT -->
+        <div id="memory-tabuleiro" class="memory-tabuleiro">
+        </div>
+
+        <button id="memory-reiniciar" type="button">
+            REINICIAR JOGO
+        </button>
+
+    </div>
+
+    <!-- TELA DE VITÓRIA -->
+    <div id="memory-resultado" hidden>
+
+        <h2>🏆 PARABÉNS!</h2>
+
+        <p>Você encontrou todos os pares!</p>
+
+        <p id="memory-resultado-tempo"></p>
+        <p id="memory-resultado-tentativas"></p>
+
+        <button id="memory-jogar-novamente" type="button">
+            JOGAR NOVAMENTE
+        </button>
+
+    </div>
+
+</section>
+
+
 
         <!-- SEÇÃO DE JOGADORES -->
         <section id="jogadores">
@@ -347,6 +417,7 @@
     <!-- JAVASCRIPT -->
      <script src="script.js"></script>
      <script src="duelo.js"></script>
+     <script src="memory.js"></script>
 
 </body>
 

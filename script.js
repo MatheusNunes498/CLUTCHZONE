@@ -364,6 +364,15 @@ let respostaBloqueada = false;
 
 botaoQuiz.addEventListener("click", function() {
 
+    // Fecha o NBA Memory ao iniciar o Quiz
+if (typeof sairMemory === "function") {
+    sairMemory();
+    document.getElementById("memory").hidden = true;
+}
+
+  // Fecha o Duelo
+ document.getElementById("duelo").hidden = true;
+
     clearInterval(intervaloRelogio);
     clearTimeout(temporizadorAvanco);
 

@@ -960,3 +960,230 @@ body {
     object-position: center top;
 }
 
+
+/* ===================================
+   NBA MEMORY
+=================================== */
+
+.memory-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px 25px;
+    background: #191c23;
+    border: 1px solid #292d36;
+    border-radius: 18px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Mantém elementos ocultos realmente escondidos */
+.memory-container[hidden],
+.memory-container [hidden] {
+    display: none !important;
+}
+
+/* CABEÇALHO */
+
+.memory-cabecalho h2 {
+    font-size: 32px;
+    color: #f28c28;
+    margin-bottom: 12px;
+}
+
+.memory-cabecalho p {
+    color: #c5c5c5;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* MENU DE DIFICULDADES */
+
+.memory-menu {
+    padding: 25px 15px;
+    background: #111318;
+    border: 1px solid #292d36;
+    border-radius: 14px;
+}
+
+.memory-menu h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.memory-dificuldades {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.memory-dificuldades button,
+#memory-reiniciar,
+#memory-jogar-novamente {
+    padding: 14px 24px;
+    background: #f28c28;
+    color: #111318;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.memory-dificuldades button:hover,
+#memory-reiniciar:hover,
+#memory-jogar-novamente:hover {
+    background: #ffab52;
+    transform: translateY(-3px);
+}
+
+/* PLACAR DO JOGO */
+
+.memory-topo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 18px;
+    background: #111318;
+    border: 1px solid #292d36;
+    border-radius: 10px;
+}
+
+.memory-topo span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #f28c28;
+}
+
+/* TABULEIRO */
+
+.memory-tabuleiro {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+/* CARTAS */
+
+.memory-carta {
+    aspect-ratio: 3 / 4;
+    background: #252a33;
+    border: 2px solid #f28c28;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background 0.3s;
+    padding: 10px;
+}
+
+.memory-carta:hover {
+    transform: translateY(-4px);
+    background: #303641;
+}
+
+.memory-carta img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.memory-carta.virada {
+    background: #ffffff;
+    border-color: #ffffff;
+}
+
+.memory-carta.encontrada {
+    border-color: #36c777;
+    background: #183a2a;
+    cursor: default;
+}
+
+/* TELA DE RESULTADO */
+
+#memory-resultado {
+    padding: 35px 20px;
+    background: #111318;
+    border: 1px solid #292d36;
+    border-radius: 14px;
+}
+
+#memory-resultado h2 {
+    font-size: 30px;
+    color: #f28c28;
+    margin-bottom: 20px;
+}
+
+#memory-resultado p {
+    margin-bottom: 15px;
+    color: #c5c5c5;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+
+    .memory-container {
+        margin: 30px 12px;
+        padding: 25px 15px;
+    }
+
+    .memory-cabecalho h2 {
+        font-size: 26px;
+    }
+
+    .memory-dificuldades {
+        flex-direction: column;
+    }
+
+    .memory-dificuldades button {
+        width: 100%;
+    }
+
+    .memory-topo {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .memory-topo span {
+        font-size: 12px;
+    }
+
+    .memory-tabuleiro {
+        gap: 8px;
+    }
+
+    .memory-carta {
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+}
+
+
+/* VERSO DAS CARTAS DO NBA MEMORY */
+
+.memory-carta {
+    font-family: Arial, sans-serif;
+    font-size: 38px;
+    font-weight: bold;
+    color: #f28c28;
+}
+
+.memory-carta.virada {
+    color: #111318;
+}
+
+.memory-carta.encontrada {
+    background: #183a2a;
+    border-color: #36c777;
+}
+
+
