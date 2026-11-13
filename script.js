@@ -357,6 +357,7 @@ let tempoRestante = 0;
 let intervaloRelogio = null;
 let temporizadorAvanco = null;
 let respostaBloqueada = false;
+let temporizadorShaq = null;
 
 // =========================================
 // INICIAR OU REINICIAR O QUIZ
@@ -375,6 +376,7 @@ if (typeof sairMemory === "function") {
 
     clearInterval(intervaloRelogio);
     clearTimeout(temporizadorAvanco);
+    clearTimeout(temporizadorShaq);
 
     perguntaAtual = 0;
     pontuacao = 0;
@@ -545,41 +547,44 @@ function verificarResposta(indiceEscolhido) {
     document.getElementById("pontuacao").textContent =
         "PLACAR: " + pontuacao + " PTS";
 
-    // VERIFICAR ÚLTIMA PERGUNTA
+   // =========================================
+// VERIFICAR ÚLTIMA PERGUNTA
+// =========================================
 
-    const ultimaPergunta =
-        perguntaAtual === perguntas.length - 1;
+const ultimaPergunta =
+    perguntaAtual === perguntas.length - 1;
 
-    if (ultimaPergunta) {
+if (ultimaPergunta) {
+
+    // Espera 2 segundos antes de mostrar o Shaq
+    temporizadorShaq = setTimeout(function() {
+
+        if (telaQuiz.hidden) {
+            return;
+        }
+
         surpresaShaq.hidden = false;
-    }
 
-    // AVANÇAR PARA A PRÓXIMA PERGUNTA
+    }, 2000);
+
+    return;
+}
+
+// =========================================
+// AVANÇAR PARA A PRÓXIMA PERGUNTA
+// =========================================
 
     temporizadorAvanco = setTimeout(function() {
 
-        perguntaAtual++;
+    perguntaAtual++;
 
-        if (perguntaAtual < perguntas.length) {
+    respostaBloqueada = false;
+    feedback.textContent = "";
 
-            respostaBloqueada = false;
-            feedback.textContent = "";
+    mostrarPergunta();
 
-            mostrarPergunta();
+}, 1200);
 
-        } else {
-
-            telaQuiz.classList.remove("modo-jogador");
-
-            feedback.textContent =
-                "🏆 FIM DO QUIZ! Pontuação final: " +
-                pontuacao + " pontos!";
-
-            feedback.style.color = "#f59e0b";
-
-        }
-
-    }, ultimaPergunta ? 4000 : 1200);
 }
 
 // =========================================
@@ -639,5 +644,18 @@ function iniciarRelogio() {
 }
 
 document.getElementById("fechar-shaq").addEventListener("click", function() {
+
+    // Esconde o GIF
     surpresaShaq.hidden = true;
+
+    // Remove o visual especial da pergunta
+    telaQuiz.classList.remove("modo-jogador");
+
+    // Mostra o resultado final
+    feedback.textContent =
+        "🏆 FIM DO QUIZ! Pontuação final: " +
+        pontuacao + " pontos!";
+
+    feedback.style.color = "#f59e0b";
+
 });

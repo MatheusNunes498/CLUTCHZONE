@@ -63,6 +63,50 @@
         </section>
 
 
+<!-- FORMULÁRIO DO JOGADOR -->
+<section id="perfil" class="perfil-container">
+
+    <div class="titulo-secao">
+        <span>CLUTCHZONE EXPERIENCE</span>
+        <h2>PREPARE-SE PARA ENTRAR EM QUADRA</h2>
+        <p>Preencha seu perfil e escolha seu desafio favorito.</p>
+    </div>
+
+    <form id="form-jogador" class="form-jogador" novalidate>
+
+        <label for="nome-jogador">NOME DO JOGADOR</label>
+
+        <input
+            type="text"
+            id="nome-jogador"
+            name="nome"
+            placeholder="Digite seu nome"
+            minlength="3"
+            maxlength="30"
+            required
+        >
+
+        <label for="desafio-jogador">ESCOLHA SEU DESAFIO</label>
+
+        <select id="desafio-jogador" name="desafio" required>
+            <option value="">Selecione um desafio</option>
+            <option value="quiz">Quiz NBA</option>
+            <option value="duelo">Duelo de Jogadores</option>
+            <option value="memory">NBA Memory</option>
+        </select>
+
+        <p id="erro-formulario" role="alert" hidden></p>
+
+        <button type="submit" class="btn-perfil">
+            ENTRAR EM QUADRA
+        </button>
+
+    </form>
+
+    <p id="mensagem-jogador" aria-live="polite" hidden></p>
+
+</section>
+
         <!-- ÁREA DE DESAFIOS -->
         <section id="desafios" class="desafios">
 
@@ -424,6 +468,8 @@
 <div id="ranking-lista" class="ranking-lista" hidden>
 </div>
 
+</section>
+
     </main>
 
 
@@ -440,6 +486,8 @@
      <script src="duelo.js"></script>
      <script src="memory.js"></script>
      <script src="ranking.js"></script>
+     <script src="perfil.js"></script>
+
 
 </body>
 

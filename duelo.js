@@ -420,6 +420,11 @@ botaoDuelo.addEventListener("click", function() {
         clearTimeout(temporizadorAvanco);
     }
 
+    if (typeof temporizadorShaq !== "undefined") {
+        clearTimeout(temporizadorShaq);
+        surpresaShaq.hidden = true;
+    }
+
     telaQuizDuelo.hidden = true;
 
     iniciarDuelo();
@@ -742,7 +747,10 @@ const linksMenu = document.querySelectorAll(
 );
 
 // FECHAR TODOS OS JOGOS
-function fecharJogos() {
+function fecharJogos() { 
+
+    clearTimeout(temporizadorShaq);
+     surpresaShaq.hidden = true;
 
     // Fecha o Quiz
     telaQuizDuelo.hidden = true;

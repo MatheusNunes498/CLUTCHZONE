@@ -1425,3 +1425,94 @@ body {
     }
 }
 
+
+/* ==================================
+   FORMULÁRIO - PERFIL DO JOGADOR
+================================== */
+
+.perfil-container {
+    padding: 70px 20px;
+    background-color: #111318;
+    text-align: center;
+}
+
+.form-jogador {
+    max-width: 480px;
+    margin: 35px auto 0;
+    padding: 30px;
+    background-color: #191c23;
+    border: 1px solid #292d36;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.form-jogador label {
+    color: #f28c28;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-jogador input,
+.form-jogador select {
+    width: 100%;
+    padding: 14px;
+    background-color: #282e37;
+    border: 1px solid #424852;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.form-jogador input:focus,
+.form-jogador select:focus {
+    outline: 2px solid #f28c28;
+    outline-offset: 2px;
+}
+
+.btn-perfil {
+    margin-top: 10px;
+    padding: 15px;
+    background-color: #f28c28;
+    border: none;
+    border-radius: 8px;
+    color: #111318;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-perfil:hover {
+        background-color: #ffab52;
+    }
+}
+
+#erro-formulario {
+    color: #ef4444;
+    font-size: 14px;
+}
+
+#mensagem-jogador {
+    margin: 25px auto 0;
+    max-width: 480px;
+    color: #22c55e;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* AJUSTE PARA CELULARES */
+@media (max-width: 600px) {
+    .perfil-container {
+        padding: 45px 15px;
+    }
+
+    .form-jogador {
+        padding: 20px;
+    }
+}
+
+
