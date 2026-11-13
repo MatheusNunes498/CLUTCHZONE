@@ -1515,4 +1515,41 @@ body {
     }
 }
 
+/* =========================================
+   BOTÃO VOLTAR AOS DESAFIOS
+========================================= */
+
+.btn-voltar-desafios {
+    display: block;
+    margin: 25px auto 10px;
+    padding: 14px 24px;
+
+    background-color: #f28c28;
+    color: #111318;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: background-color 0.3s;
+}
+
+.btn-voltar-desafios:hover {
+    background-color: #ffad55;
+}
+
+.btn-voltar-desafios[hidden] {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .btn-voltar-desafios {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
 

@@ -28,6 +28,28 @@ const nome2 = document.getElementById("nome-duelo-2");
 const feedbackDuelo = document.getElementById("feedback-duelo");
 const botaoProxima = document.getElementById("proxima-rodada");
 
+// BOTÃO PARA VOLTAR AOS DESAFIOS
+
+const botaoVoltarDuelo = document.createElement("button");
+
+botaoVoltarDuelo.textContent = "← ESCOLHER OUTRO DESAFIO";
+botaoVoltarDuelo.type = "button";
+botaoVoltarDuelo.className = "btn-voltar-desafios";
+botaoVoltarDuelo.hidden = true;
+
+botaoProxima.insertAdjacentElement("afterend", botaoVoltarDuelo);
+
+botaoVoltarDuelo.addEventListener("click", function() {
+
+    fecharJogos();
+
+    document.getElementById("desafios").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
 const cardsDuelo = document.querySelector(".duelo-jogadores");
 
 // =========================================
@@ -390,6 +412,7 @@ function iniciarDuelo() {
     rodadaAtualDuelo = 0;
     pontosDuelo = 0;
     respostaDueloBloqueada = false;
+    botaoVoltarDuelo.hidden = true;
 
     prepararDuelos();
 
@@ -731,6 +754,7 @@ function finalizarDuelo() {
 
     botaoProxima.textContent = "JOGAR NOVAMENTE";
     botaoProxima.hidden = false;
+    botaoVoltarDuelo.hidden = false;
 
 }
 

@@ -12,6 +12,28 @@ const feedback = document.getElementById("feedback-resposta");
 const botoesAlternativas = document.querySelectorAll(".alternativa");
 const surpresaShaq = document.getElementById("surpresa-shaq");
 
+// BOTÃO PARA VOLTAR AOS DESAFIOS
+
+const botaoVoltarDesafios = document.createElement("button");
+
+botaoVoltarDesafios.textContent = "← ESCOLHER OUTRO DESAFIO";
+botaoVoltarDesafios.type = "button";
+botaoVoltarDesafios.className = "btn-voltar-desafios";
+botaoVoltarDesafios.hidden = true;
+
+feedback.insertAdjacentElement("afterend", botaoVoltarDesafios);
+
+botaoVoltarDesafios.addEventListener("click", function() {
+
+    fecharJogos();
+
+    document.getElementById("desafios").scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+});
+
 // =========================================
 // BANCO DE PERGUNTAS
 // =========================================
@@ -386,6 +408,7 @@ if (typeof sairMemory === "function") {
     surpresaShaq.hidden = true;
 
     feedback.textContent = "";
+    botaoVoltarDesafios.hidden = true;
 
     document.getElementById("pontuacao").textContent =
         "PLACAR: 0 PTS";
@@ -657,5 +680,6 @@ document.getElementById("fechar-shaq").addEventListener("click", function() {
         pontuacao + " pontos!";
 
     feedback.style.color = "#f59e0b";
+    botaoVoltarDesafios.hidden = false;
 
 });
