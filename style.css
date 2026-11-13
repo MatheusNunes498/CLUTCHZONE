@@ -427,9 +427,13 @@ body {
     transition: background-color 0.2s, border-color 0.2s;
 }
 
-.alternativa:hover {
-    border-color: #f59e0b;
-    background-color: #353b44;
+/* EFEITO HOVER APENAS PARA COMPUTADORES */
+
+@media (hover: hover) and (pointer: fine) {
+    .alternativa:hover {
+        border-color: #f59e0b;
+        background-color: #353b44;
+    }
 }
 
 .alternativa.correta,
